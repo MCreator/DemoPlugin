@@ -2,6 +2,8 @@
 
 This repository demonstrates a basic MCreator plugin structure.
 
+WARNING: The plugin structure might and will change in the future so keep your eye on this repository for changes on the format if you are a plugin dev.
+
 Demonstrated features:
 * Custom procedural procedure block
 * Custom output procedure block
