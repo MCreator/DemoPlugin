@@ -1,0 +1,10 @@
+{
+  "id": "demo_plugin",
+  "minversion": 2020200000,
+  "weight": 0,
+  "info": {
+    "name": "MCreator demo plugin",
+	"description": "Demo plugin to demonstrate a typical plugin structure",
+	"author": "Pylo"
+  }
+}
