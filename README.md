@@ -19,6 +19,8 @@ Other plugin features not demonstrated:
 For features not demonstrated in this plugin, you can check the built-in plugins in &lt;install dir&gt;/plugins 
 folder of your MCreator installation for the reference.
 
+https://mcreator.net/wiki/section/mcreator-plugins
+
 # Exporting
 
 To export the plugin, simply archive the root folder of the plugin into a ZIP file, so the plugin has 
