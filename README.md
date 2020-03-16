@@ -52,7 +52,7 @@ FLAVOR-generatorName
 Where FLAVOR can be:
 
 * (nothing) - eg. "1.14.4" - such generators indicate forge generator flavor
-* datapack - eg. "datapack-1.14.4" - sucg generators indicate datapack generator flavor
+* datapack - eg. "datapack-1.14.4" - such generators indicate datapack generator flavor
 
 # Non-plugin files
 
