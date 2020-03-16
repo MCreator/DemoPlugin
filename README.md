@@ -35,6 +35,25 @@ the following structure:
 To install exported plugin in MCreator, put the plugin ZIP file into &lt;user home&gt;/.mcreator/plugins
 or install them from MCreator's preferences window and relaunch MCreator. 
 
+# Generator naming conventions
+
+Generators are added in the root folder of the plugin:
+
+* &lt;plugin file name&gt;.zip
+   * <generator 1 name>
+   * <generator 2 name>
+   * <generator 3 name>
+   * ...
+
+Generator names are formatted like this:
+
+FLAVOR-generatorName
+
+Where FLAVOR can be:
+
+* (nothing) - eg. 1.14.4 - such generators indicate forge generator flavor
+* datapack - eg. datapack-1.14.4 - sucg generators indicate datapack generator flavor
+
 # Non-plugin files
 
 The following files are not part of the plugin structure but are there for the purpose of Intellij IDEA IDE support
