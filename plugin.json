@@ -1,6 +1,6 @@
 {
   "id": "demo_plugin",
-  "minversion": 2020200000,
+  "minversion": 202000200000,
   "weight": 0,
   "info": {
     "name": "MCreator demo plugin",
