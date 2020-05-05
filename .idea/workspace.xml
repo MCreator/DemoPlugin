@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aab67995-fa58-4a10-879f-dc94a3d29254" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1.14.4/procedures/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procedures/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.15.2/procedures/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.15.2/procedures/demo_output_block.java.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.15.2/procedures/demo_procedural_block.java.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.15.2/triggers/demo_trigger.java.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.12.2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +32,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
@@ -42,6 +46,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Klemen\workspace_idea\MCreatorDemoPlugin" />
       <recent name="C:\Users\Klemen\.mcreator\plugins\demo-plugin\triggers" />
       <recent name="C:\Users\Klemen\.mcreator\plugins\demo-plugin\procedures" />
     </key>
@@ -59,11 +64,12 @@
       <workItem from="1583920293737" duration="2655000" />
       <workItem from="1583953985368" duration="1133000" />
       <workItem from="1584003900497" duration="1337000" />
+      <workItem from="1588691629885" duration="774000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1583920431895">
