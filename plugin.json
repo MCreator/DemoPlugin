@@ -5,7 +5,7 @@
   "info": {
     "name": "MCreator demo plugin",
     "version": "1.0",
-	"description": "Demo plugin to demonstrate a typical plugin structure",
-	"author": "Pylo"
+    "description": "Demo plugin to demonstrate a typical plugin structure",
+    "author": "Pylo"
   }
 }
