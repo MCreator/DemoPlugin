@@ -1,6 +1,6 @@
 # Demo MCreator plugin
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Pylo/MCreatorDemoPlugin/blob/master/LICENSE) 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Pylo/MCreatorDemoPlugin/blob/master/LICENSE) 
 
 This repository demonstrates a basic MCreator plugin structure.
 
