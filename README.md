@@ -1,6 +1,6 @@
 # Demo MCreator plugin
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Pylo/MCreatorDemoPlugin/blob/master/LICENSE) 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Pylo/MCreatorDemoPlugin/blob/master/LICENSE)
 
 This repository demonstrates a basic MCreator plugin structure.
 
@@ -11,21 +11,24 @@ Demonstrated features:
 * Custom output procedure block
 * Custom procedure category
 * Custom global trigger
+* Custom templates
 * Generator for given features for 1.14.4
 
 Other plugin features not demonstrated:
 * Custom JSON advancement triggers and categories
 * AI task blocks and categories
 * Full generator plugin
+- Data lists
+* APIs - eg. Minecraft Link
 
-For features not demonstrated in this plugin, you can check the built-in plugins in &lt;install dir&gt;/plugins 
+For features not demonstrated in this plugin, you can check the built-in plugins in &lt;install dir&gt;/plugins
 folder of your MCreator installation for the reference.
 
 https://mcreator.net/wiki/section/mcreator-plugins
 
 # Exporting
 
-To export the plugin, simply archive the root folder of the plugin into a ZIP file, so the plugin has 
+To export the plugin, simply archive the root folder of the plugin into a ZIP file, so the plugin has
 the following structure:
 
 * &lt;plugin file name&gt;.zip
@@ -37,7 +40,7 @@ the following structure:
 # Installation
 
 To install exported plugin in MCreator, put the plugin ZIP file into &lt;user home&gt;/.mcreator/plugins
-or install them from MCreator's preferences window and relaunch MCreator. 
+or install them from MCreator's preferences window and relaunch MCreator.
 
 # Generator naming conventions
 
@@ -57,6 +60,9 @@ Where FLAVOR can be:
 
 * (nothing) - eg. "1.14.4" - such generators indicate forge generator flavor
 * datapack - eg. "datapack-1.14.4" - such generators indicate datapack generator flavor
+* addon  - eg. "addon-1.14.x" - such generators indicate addon generator flavor
+* fabric  - eg. "fabric-1.16.1" - such generators indicate fabric generator flavor
+* spigot  - eg. "spigot-1.16.1" - such generators indicate spigot generator flavor
 
 # Non-plugin files
 
