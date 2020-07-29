@@ -58,7 +58,7 @@ FLAVOR-generatorName
 
 Where FLAVOR can be:
 
-* (nothing) - eg. "1.14.4" - such generators indicate forge generator flavor
+* forge - eg. "forge-1.15.2" - such generators indicate forge generator flavor
 * datapack - eg. "datapack-1.14.4" - such generators indicate datapack generator flavor
 * addon  - eg. "addon-1.14.x" - such generators indicate addon generator flavor
 * fabric  - eg. "fabric-1.16.1" - such generators indicate fabric generator flavor
