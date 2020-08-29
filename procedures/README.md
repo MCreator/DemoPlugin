@@ -90,7 +90,7 @@ Has the same structure as procedural procedure block, but needs to have Blockly 
 
 Output type needs to be in blockly format, for example:
 * Number
-* Logic
+* Boolean
 * String
 * MCItem
 * MCItemBlock
