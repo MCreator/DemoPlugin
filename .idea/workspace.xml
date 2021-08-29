@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aab67995-fa58-4a10-879f-dc94a3d29254" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.15.2/procedures/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.15.2/procedures/demo_output_block.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.15.2/procedures/demo_procedural_block.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.15.2/triggers/demo_trigger.java.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/texts_fr_FR.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.12.2/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procedures/$democategory.json" beforeDir="false" afterPath="$PROJECT_DIR$/procedures/$democategory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procedures/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/procedures/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procedures/demo_output_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/procedures/demo_output_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procedures/demo_procedural_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/procedures/demo_procedural_block.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +31,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -51,6 +52,7 @@
       <recent name="C:\Users\Klemen\.mcreator\plugins\demo-plugin\procedures" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -70,6 +72,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1583920431895">
