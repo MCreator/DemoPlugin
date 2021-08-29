@@ -6,7 +6,7 @@ In this folder, new procedure blocks and procedure categories can be defined
 
 Procedure categories are added in files with the following name:
 
-$categorymachinename.json
+`$categorymachinename.json`
 
 JSON format for a custom procedure category is:
 
@@ -17,11 +17,15 @@ JSON format for a custom procedure category is:
 }
 ```
 
+To translate the display name, you can remove the `name` property. Then, add a line in the `texts.properties` file using this template. 
+
+`block.category.[$categorymachinename]=[display name]`
+
 # Procedure blocks
 
 Each procedure block has own JSON file named:
 
-blockmachinename.json
+`blockmachinename.json`
 
 ## Procedural procedure block
 
@@ -67,14 +71,18 @@ Dependency format:
 ```
 
 Dependency types:
-* int
-* boolean
-* world
+* actionresulttype
+* advancement
+* blockstate
+* dimensiontype
+* direction
 * entity
 * itemstack
+* logic
 * map
+* number
 * string
-* direction
+* world
 
 ## Output procedure block
 
@@ -100,6 +108,6 @@ Output type needs to be in blockly format, for example:
 
 Each procedure block needs its own template defined for all desired generators. These templates belong in:
 
-&lt;plugin root&gt;/&lt;generator machine name&gt;/procedures/blockmachinename.java.ftl
+`<plugin root>/<generator machine name>/procedures/blockmachinename.java.ftl`
 
-Check ./1.14.4/procedures/ for examples of such templates.
+Check `./1.14.4/procedures/` or `./1.15.2/procedures/` for examples of such templates.
