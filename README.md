@@ -7,12 +7,11 @@ This repository demonstrates a basic MCreator plugin structure.
 WARNING: The plugin structure might and will change in the future so keep your eye on this repository for changes on the format if you are a plugin dev.
 
 Demonstrated features:
-* Custom procedural procedure block
-* Custom output procedure block
+* Custom procedural/output procedure block
 * Custom procedure category
 * Custom global trigger
 * Custom templates
-* Generator for given features for 1.14.4
+* Generator for given features for 1.14.4 and 1.15.2
 
 Other plugin features not demonstrated:
 * Custom JSON advancement triggers and categories

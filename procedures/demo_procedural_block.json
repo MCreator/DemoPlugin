@@ -1,5 +1,4 @@
 {
-  "message0": "Place %1 at x: %2 y: %3 z: %4",
   "args0": [
     {
       "type": "input_value",
