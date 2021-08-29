@@ -7,7 +7,7 @@
     "version": "1.0",
     "description": "Demo plugin to demonstrate a typical plugin structure",
     "author": "Pylo",
-    "credits": "Thank you to my dog!",
+    "credits": "Thanks to my dog!",
     "dependencies":  [
       "pluginID",
       "generator-fabric-1.16.5",
