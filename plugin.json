@@ -6,6 +6,14 @@
     "name": "MCreator demo plugin",
     "version": "1.0",
     "description": "Demo plugin to demonstrate a typical plugin structure",
-    "author": "Pylo"
+    "author": "Pylo",
+    "credits": "Thank you to my dog!",
+    "dependencies":  [
+      "pluginID",
+      "generator-fabric-1.16.5",
+      "electrona_api"
+    ],
+    "updateJSONURL": "https://raw.githubusercontent.com/Goldorion/Fabric-Generator-MCreator/1.16.5/update.json",
+    "pluginPageID": 64512
   }
 }
