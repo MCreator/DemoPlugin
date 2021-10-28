@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1bf8e83b-cb75-4714-a6d3-718d18e07a4c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.14.4/procedures/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/forge-1.14.4/procedures/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.14.4/procedures/demo_output_block.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/forge-1.14.4/procedures/demo_output_block.java.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.14.4/procedures/demo_procedural_block.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/forge-1.14.4/procedures/demo_procedural_block.java.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.14.4/triggers/demo_trigger.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/forge-1.14.4/triggers/demo_trigger.java.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.15.2/procedures/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/forge-1.15.2/procedures/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.15.2/procedures/demo_output_block.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/forge-1.15.2/procedures/demo_output_block.java.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.15.2/procedures/demo_procedural_block.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/forge-1.15.2/procedures/demo_procedural_block.java.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.15.2/triggers/demo_trigger.java.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/forge-1.15.2/triggers/demo_trigger.java.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/texts.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/texts.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/texts_fr_FR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/texts_fr_FR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procedures/$democategory.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/procedures/$democategory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procedures/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/procedures/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procedures/demo_output_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/procedures/demo_output_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procedures/demo_procedural_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/procedures/demo_procedural_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ptpl/procedure template.ptpl" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/ptpl/procedure template.ptpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/textures/texturemaker/limestone.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/textures/texturemaker/limestone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triggers/demo_trigger.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/demo_trigger.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Demo-Plugin" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Demo-Plugin" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\DemoPlugin\src" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

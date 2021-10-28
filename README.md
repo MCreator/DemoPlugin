@@ -74,3 +74,9 @@ for better plugin development, documentation purposes and similar:
 * demo-plugin.iml
 * .idea/*
 * .github/*
+
+# Gradle tasks
+To help you with repetitive tasks, you can open this project inside Intellij IDEA and load the gradle project. Then, you will have access to 3 new Gradle tasks.
+- other/build: This task will take all files and folders into the `src` directory and will compile them into a ZIP file. You can edit the name using `Globals.ARCHIVE_NAME` in the build.gradle file. The plugin will be saved into a `build` folder inside this project.
+- other/install: It will build the plugin and then, install it inside the plugins folder of MCreator.
+- other/launch: It will build the plugin, install it and then launch MCreator using the directory of `Globals.MCREATOR_ROOT_FOLDER`. **Windows only**

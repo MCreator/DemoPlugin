@@ -1,7 +1,7 @@
 import java.nio.file.Files
 
 class Globals {
-    private static final def ARCHIVE_NAME = "demo-plugin"
+    private static final def ARCHIVE_NAME = "demo-plugin" // The name of the exported file
     public static final def MCREATOR_ROOT_FOLDER = "C://Program Files/Pylo/MCreator/"
 
     static def getArchiveName() {
