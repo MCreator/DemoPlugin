@@ -1,9 +1,7 @@
-import jdk.internal.misc.OSEnvironment
-
 import java.nio.file.Files
 
 class Globals {
-    private static final def ARCHIVE_NAME = "generator-fabric-1.16.5"
+    private static final def ARCHIVE_NAME = "demo-plugin"
     public static final def MCREATOR_ROOT_FOLDER = "C://Program Files/Pylo/MCreator/"
 
     static def getArchiveName() {
