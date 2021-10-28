@@ -12,6 +12,7 @@ Demonstrated features:
 * Custom global trigger
 * Custom templates
 * Generator for given features for 1.14.4 and 1.15.2
+* Localized texts
 
 Other plugin features not demonstrated:
 * Custom JSON advancement triggers and categories

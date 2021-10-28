@@ -1,28 +1,7 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
-
-# idea
-out
-build
-*.ipr
-*.iws
-*.iml
-*.idea
-
-# Mac OS Garbage    
-.DS_Store
-
-# VSCode
-.vscode
-*.code-workspace
-
-# BBedit
-*.bbproject
+#FILES FOR INTELLIJ IDEA
+#=======================
+**/.idea/workspace.xml
+**/.idea/modules.xml
 
 # Ignore Gradle project-specific cache directory
 .gradle
