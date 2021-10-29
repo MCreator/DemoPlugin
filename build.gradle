@@ -2,8 +2,11 @@ import java.nio.file.Files
 
 class Globals {
     private static final def ARCHIVE_NAME = "demo-plugin" // The name of the exported file
-    public static final def MCREATOR_ROOT_FOLDER_WINDOWS = "C://Program Files/Pylo/MCreator/"
+
+    // You can change the root folder of your OS if you have a custom installation
+    public static final def MCREATOR_ROOT_FOLDER_WINDOWS = "C://Program Files/Pylo/MCreator/" // Default path on Windows
     public static def MCREATOR_ROOT_FOLDER_MAC_LINUX = "/Applications/MCreator.app/Contents/MacOS/mcreator"
+    // Default path on macOS and Linux
 
     static def getArchiveName() {
         return ARCHIVE_NAME + ".zip"
