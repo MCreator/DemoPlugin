@@ -17,14 +17,16 @@ class Globals {
 // workaround for IDEA-265203
 System.setProperty("user.dir", projectDir.toString())
 
-task build(type: Zip) {
+task exportPlugin(type: Zip) {
+    group("mcreator_plugins")
     from 'src'
     archiveFileName = Globals.getArchiveName()
     destinationDirectory = file('build/')
 }
 
 task install {
-    dependsOn build
+    dependsOn exportPlugin
+    group("mcreator_plugins")
     doLast {
         System.out.println("Installing plugin...")
         if (Globals.getOSName().contains('mac') || Globals.getOSName().contains('OS X') || Globals.getOSName().contains('linux')) {
@@ -35,8 +37,9 @@ task install {
     }
 }
 
-task launch {
+task runMCreator {
     dependsOn install
+    group("mcreator_plugins")
     doLast {
         System.out.println("Launching MCreator...")
         if (Globals.getOSName().contains('windows')) {
