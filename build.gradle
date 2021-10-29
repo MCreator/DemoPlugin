@@ -2,7 +2,8 @@ import java.nio.file.Files
 
 class Globals {
     private static final def ARCHIVE_NAME = "demo-plugin" // The name of the exported file
-    public static final def MCREATOR_ROOT_FOLDER = "C://Program Files/Pylo/MCreator/"
+    public static final def MCREATOR_ROOT_FOLDER_WINDOWS = "C://Program Files/Pylo/MCreator/"
+    public static def MCREATOR_ROOT_FOLDER_MAC_LINUX = "/Applications/MCreator.app/Contents/MacOS/mcreator"
 
     static def getArchiveName() {
         return ARCHIVE_NAME + ".zip"
@@ -41,11 +42,22 @@ task launch {
         if (Globals.getOSName().contains('windows')) {
             try {
                 exec {
-                    workingDir Globals.MCREATOR_ROOT_FOLDER
+                    workingDir Globals.MCREATOR_ROOT_FOLDER_WINDOWS
                     commandLine 'cmd', '/c', 'mcreator.bat'
                 }
             } catch (IOException e) {
-                throw new RuntimeException("Could not launch MCreator! Please make sure you have installed it to C://Program Files/", e)
+                //noinspection GroovyAssignabilityCheck
+                throw new RuntimeException("Could not launch MCreator! Please make sure you have installed it to " + Globals.MCREATOR_ROOT_FOLDER_WINDOWS, e)
+            }
+        } else if (Globals.getOSName().contains('mac') || Globals.getOSName().contains('OS X') || Globals.getOSName().contains('linux')) {
+            try {
+                ProcessBuilder builder = new ProcessBuilder(Globals.MCREATOR_ROOT_FOLDER_MAC_LINUX)
+                builder.redirectOutput(ProcessBuilder.Redirect.INHERIT)
+                builder.redirectError(ProcessBuilder.Redirect.INHERIT)
+                builder.start()
+            } catch (IOException e) {
+                //noinspection GroovyAssignabilityCheck
+                throw new RuntimeException("Could not launch MCreator! Please make sure you have installed it to " + Globals.MCREATOR_ROOT_FOLDER_MAC_LINUX, e)
             }
         }
     }

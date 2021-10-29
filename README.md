@@ -79,4 +79,4 @@ for better plugin development, documentation purposes and similar:
 To help you with repetitive tasks, you can open this project inside Intellij IDEA and load the gradle project. Then, you will have access to 3 new Gradle tasks.
 - other/build: This task will take all files and folders into the `src` directory and will compile them into a ZIP file. You can edit the name using `Globals.ARCHIVE_NAME` in the build.gradle file. The plugin will be saved into a `build` folder inside this project.
 - other/install: It will build the plugin and then, install it inside the plugins folder of MCreator.
-- other/launch: It will build the plugin, install it and then launch MCreator using the directory of `Globals.MCREATOR_ROOT_FOLDER`. To restart MCreator, you need to close it and then, start again the task. **Windows only**
+- other/launch: It will build the plugin, install it and then launch MCreator using the directory of `Globals.MCREATOR_ROOT_FOLDER_WINDOWS` or `Globals.MCREATOR_ROOT_FOLDER_MAC_LINUX`. To restart MCreator, you need to close it and then, start again the task.
