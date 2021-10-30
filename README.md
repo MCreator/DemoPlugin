@@ -18,17 +18,33 @@ Other plugin features not demonstrated:
 * Custom JSON advancement triggers and categories
 * AI task blocks and categories
 * Full generator plugin
-- Data lists
+* Data lists
 * APIs - eg. Minecraft Link
+* Variables
+* UI Themes
 
 For features not demonstrated in this plugin, you can check the built-in plugins in &lt;install dir&gt;/plugins
 folder of your MCreator installation for the reference.
 
 https://mcreator.net/wiki/section/mcreator-plugins
 
-# Exporting
+# Gradle tasks
+This demo plugin comes with some Gradle tasks to help you with the development of your plugin. 
+In order to use them, it is recommended to use Intellij IDEA as it has been tested with this IDE. However, other programs such as Eclipse may also work, but the procedure may change.
+In Intellij, find your working folder and open the build.gradle file. Then, load th gradle project and wait. If you don't have a JDK for Java 16, you will need to install one. You can go on [Adoptium](https://adoptium.net) (AdoptOpenJDK) to find one.
+When it is done, you should be able to see a new task group called `mcreator_plugins` in the sidebar "Gradle". Those tasks are:
+* exportPlugin: Create a new ZIP archive containing the plugin in a `build` folder
+  * You can edit the name using `Globals.ARCHIVE_NAME` in the build.gradle file.
+* install: Install the plugin (the generated file of `exportPlugin`) inside the `plugins` folder of MCreator.
+* runMCreator: Export and install the plugin and then, launch MCreator. 
+  * The default root of each OS is used, but you can customize it by changing one of the following variables in the `build.gradle`. `Globals.MCREATOR_ROOT_FOLDER_WINDOWS` and `Globals.MCREATOR_ROOT_FOLDER_MAC_LINUX`
 
-To export the plugin, simply archive the root folder of the plugin into a ZIP file, so the plugin has
+# Exporting
+## Using Gradle
+To export your plugin, you can use the provided Gradle task. Read the section above for more information.
+
+## Manual method
+To export the plugin, simply archive the `src` folder of the plugin into a ZIP file, so the plugin has
 the following structure:
 
 * &lt;plugin file name&gt;.zip
@@ -38,7 +54,10 @@ the following structure:
    * ...
 
 # Installation
+## Using Gradle
+To export your plugin, you can use the provided Gradle task. Read the `Gradle tasks` for more information.
 
+## Manual method
 To install exported plugin in MCreator, put the plugin ZIP file into &lt;user home&gt;/.mcreator/plugins
 or install them from MCreator's preferences window and relaunch MCreator.
 
@@ -66,11 +85,5 @@ Where FLAVOR can be:
 
 # Non-plugin files
 
-The following files are not part of the plugin structure but are there for the purpose of Intellij IDEA IDE support
-for better plugin development, documentation purposes and similar:
-
-* README.md
-* LICENSE
-* demo-plugin.iml
-* .idea/*
-* .github/*
+All files outside the `src` folder are not part of the plugin structure but are there for the purpose of Intellij IDEA IDE support
+for better plugin development, documentation purposes and similar.
