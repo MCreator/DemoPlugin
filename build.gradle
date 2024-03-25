@@ -1,86 +1,27 @@
-import java.nio.file.Files
-
-class Globals {
-    private static final def ARCHIVE_NAME = "demo-plugin" // The name of the exported file
-
-    // You can change the root folder of your OS if you have a custom installation
-    public static final def MCREATOR_ROOT_FOLDER_WINDOWS = "C://Program Files/Pylo/MCreator/" // Default path on Windows
-    public static def MCREATOR_ROOT_FOLDER_MAC_LINUX = "/Applications/MCreator.app/Contents/MacOS/mcreator"
-    // Default path on macOS and Linux
-
-    static def getArchiveName() {
-        return ARCHIVE_NAME + ".zip"
-    }
-
-    static String getOSName() {
-        return System.getProperty("os.name").toLowerCase()
-    }
+plugins {
+    id "java"
 }
 
-// workaround for IDEA-265203
-System.setProperty("user.dir", projectDir.toString())
+group = 'net.mcreator.demoplugin'
+version = '1.0.0'
 
-task exportPlugin(type: Zip) {
-    group("mcreator_plugins")
-    from 'src'
-    archiveFileName = Globals.getArchiveName()
-    destinationDirectory = file('build/')
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+tasks.jar {
+    archiveFileName.set("demo-plugin.zip")
 }
 
-task install {
-    dependsOn exportPlugin
-    group("mcreator_plugins")
-    doLast {
-        System.out.println("Installing plugin...")
-        if (Globals.getOSName().contains('mac') || Globals.getOSName().contains('OS X') || Globals.getOSName().contains('linux')) {
-            installPlugin((String) ("/Users/" + System.getProperty("user.name") + "/.mcreator/plugins/"), (String) '/')
-        } else if (Globals.getOSName().contains('windows')) {
-            installPlugin((String) ("C:\\Users\\" + System.getProperty("user.name") + "\\.mcreator\\plugins\\"), (String) '\\')
-        }
-    }
-}
+tasks.register('runMCreatorWithPlugin', JavaExec) {
+    dependsOn jar
 
-task runMCreator {
-    dependsOn install
-    group("mcreator_plugins")
-    doLast {
-        System.out.println("Launching MCreator...")
-        if (Globals.getOSName().contains('windows')) {
-            try {
-                exec {
-                    workingDir Globals.MCREATOR_ROOT_FOLDER_WINDOWS
-                    commandLine 'cmd', '/c', 'mcreator.bat'
-                }
-            } catch (IOException e) {
-                //noinspection GroovyAssignabilityCheck
-                throw new RuntimeException("Could not launch MCreator! Please make sure you have installed it to " + Globals.MCREATOR_ROOT_FOLDER_WINDOWS, e)
-            }
-        } else if (Globals.getOSName().contains('mac') || Globals.getOSName().contains('OS X') || Globals.getOSName().contains('linux')) {
-            try {
-                ProcessBuilder builder = new ProcessBuilder(Globals.MCREATOR_ROOT_FOLDER_MAC_LINUX)
-                builder.redirectOutput(ProcessBuilder.Redirect.INHERIT)
-                builder.redirectError(ProcessBuilder.Redirect.INHERIT)
-                builder.start()
-            } catch (IOException e) {
-                //noinspection GroovyAssignabilityCheck
-                throw new RuntimeException("Could not launch MCreator! Please make sure you have installed it to " + Globals.MCREATOR_ROOT_FOLDER_MAC_LINUX, e)
-            }
-        }
-    }
-}
+    environment("MCREATOR_PLUGINS_FOLDER", file("./build/libs"))
+    environment("MCREATOR_PLUGINS_DEV", "")
 
-static def installPlugin(String path, String separator) {
-    File des = new File((String) (path + Globals.getArchiveName()))
-    File original = new File(String.format("%s%s%s%s%s", System.getProperty("user.dir"), separator, "build", separator, Globals.getArchiveName()))
-    if (des.exists()) {
-        des.delete()
-    }
-    try {
-        FileOutputStream os = new FileOutputStream(des)
-        Files.copy(original.toPath(), os)
-        System.out.println(String.format("Plugin successfully installed to %s ", path))
-    } catch (IOException e) {
-        e.printStackTrace()
-        throw new RuntimeException("Could not install plugin!")
-    }
+    jvmArgs '--add-opens', 'java.base/java.lang=ALL-UNNAMED'
+
+    classpath = project(':MCreator').sourceSets.main.runtimeClasspath
+
+    main = 'net.mcreator.Launcher'
+
+    workingDir = mcreator_path
 }
