@@ -25,3 +25,16 @@ tasks.register('runMCreatorWithPlugin', JavaExec) {
 
     workingDir = mcreator_path
 }
+
+subprojects { subproject ->
+    subproject.plugins.withType(JavaPlugin) {
+        test {
+            dependsOn rootProject.jar
+
+            environment("MCREATOR_PLUGINS_FOLDER", new File(rootProject.projectDir, "/build/libs"))
+            environment("MCREATOR_PLUGINS_DEV", "")
+
+            workingDir = mcreator_path
+        }
+    }
+}

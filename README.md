@@ -40,11 +40,21 @@ In order for the plugin to work, make new file called `gradle.properties` with t
 mcreator_path=<path to MCreator core Gradle project directory>
 ```
 
-# Gradle tasks
+# Running MCreator with the plugin
 
 This demo plugin comes with some Gradle tasks to help you with the development of your plugin.
 
 * `runMCreatorWithPlugin`: Run MCreator with the plugin loaded
+
+There is also IntelliJ IDEA run configuration for this task provided in the repository.
+
+**Make sure to enable Java plugins in MCreator preferences, or the plugin will not be loaded.**
+
+# Testing
+
+We highly recommend to test your plugin by running MCreator's unit tests with your plugin loaded.
+
+This Gradle project does this for you, you just need to run the `test` task.
 
 There is also IntelliJ IDEA run configuration for this task provided in the repository.
 
