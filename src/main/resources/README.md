@@ -5,7 +5,12 @@ Sample plugin.json contents:
 ```json
 {
   "id": "demo_plugin",
-  "supportedversions": [202000354321, 202000312345],
+  "supportedversions": [
+    202000354321, 
+    202000312345,
+    202400199999,
+    2024001
+  ],
   "weight": 0,
   "info": {
     "name": "MCreator demo plugin",

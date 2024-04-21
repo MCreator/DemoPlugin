@@ -1,6 +1,9 @@
 {
   "id": "demo_plugin",
-  "supportedversions": [202400199999],
+  "supportedversions": [
+    202400199999,
+    2024001
+  ],
   "weight": 0,
   "info": {
     "name": "MCreator demo plugin",
