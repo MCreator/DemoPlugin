@@ -2,7 +2,7 @@ plugins {
     id "java"
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 tasks.jar {
     archiveFileName.set("demo-plugin.zip")
@@ -25,9 +25,14 @@ tasks.register('runMCreatorWithPlugin', JavaExec) {
 subprojects { subproject ->
     subproject.plugins.withType(JavaPlugin) {
         test {
+            useJUnitPlatform()
+            include '**/GeneratorsTest.class'
+
             dependsOn rootProject.jar
 
             environment("MCREATOR_PLUGINS_FOLDER", new File(rootProject.projectDir, "/build/libs"))
+            // These generators will be tested by MCreator tests if the plugin is loaded and if the corresponding generator already exists
+            environment("MCREATOR_TEST_GENERATORS", "forge-1.14.4, forge-1.15.2")
 
             workingDir = mcreator_path
         }

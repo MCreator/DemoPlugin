@@ -1,0 +1,66 @@
+name: Build and test
+
+permissions:
+  checks: write
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+      - name: Checkout MCreator repository
+        uses: actions/checkout@v6
+        with:
+          repository: MCreator/MCreator
+          ref: master # The branch name (can also be the tag). This will be the branch on which the tests will be run
+          path: mcreator
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25.0.2'
+          distribution: 'jetbrains'
+          java-package: 'jdk+jcef'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+      - name: Cache Gradle Packages
+        uses: actions/cache@v5
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.mcreator/gradle/caches/
+            ~/.mcreator/gradle/wrapper/
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+      - name: Build and Test Using Gradle
+        run: xvfb-run -a gradle --no-build-cache clean test --project-prop mcreator_path=${{ github.workspace }}/mcreator
+      - name: Test Javadoc Generation
+        run: gradle javadoc --project-prop mcreator_path=${{ github.workspace }}/mcreator
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@49b2ca06f62aa7ef83ae6769a2179271e160d8e4
+        if: always() # always run even if the previous step fails
+        with:
+          include_passed: true
+          detailed_summary: true
+          report_paths: '**/build/test-results/test/TEST-*.xml'
+      - name: Prepare Gradle Cache
+        run: |
+          rm -f  ~/.mcreator/gradle/caches/modules-2/modules-2.lock
+          rm -fr ~/.mcreator/gradle/caches/*/plugin-resolution/
+          rm -f  ~/.mcreator/gradle/caches/minecraft/deobfedDeps/providedDummy.jar
+          rm -f  ~/.mcreator/gradle/caches/minecraft/deobfedDeps/compileDummy.jar
+          rm -f  ~/.gradle/caches/modules-2/modules-2.lock
+          rm -f  ~/.gradle/caches/modules-2/gc.properties
