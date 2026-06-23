@@ -32,7 +32,7 @@ subprojects { subproject ->
 
             environment("MCREATOR_PLUGINS_FOLDER", new File(rootProject.projectDir, "/build/libs"))
             // These generators will be tested by MCreator tests if the plugin is loaded and if the corresponding generator already exists
-            environment("MCREATOR_TEST_GENERATORS", "forge-1.14.4", "forge-1.15.2")
+            environment("MCREATOR_TEST_GENERATORS", "forge-1.14.4, forge-1.15.2")
 
             workingDir = mcreator_path
         }
