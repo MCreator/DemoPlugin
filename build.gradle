@@ -2,7 +2,7 @@ plugins {
     id "java"
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 tasks.jar {
     archiveFileName.set("demo-plugin.zip")
