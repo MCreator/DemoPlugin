@@ -1,8 +1,8 @@
 {
   "id": "demo_plugin",
   "supportedversions": [
-    202600199999,
-    2026001
+    202600399999,
+    2026003
   ],
   "weight": 0,
   "info": {

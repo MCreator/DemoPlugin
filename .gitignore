@@ -11,6 +11,7 @@
 **/.idea/libraries-with-intellij-classes.xml
 **/.idea/php.xml
 **/.idea/copilot*
+out/
 
 #FILES FOR GRADLE
 #=======================

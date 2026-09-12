@@ -1,8 +1,15 @@
 plugins {
     id "java"
+    id "idea"
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+
+// MCreator's build script configures idea.project, which only exists on the root project. As MCreator is included
+// here as a subproject, share this root project's IDEA project model with it so its configuration does not fail
+project(':MCreator').plugins.withType(IdeaPlugin).configureEach { ideaPlugin ->
+    ideaPlugin.model.project = rootProject.idea.project
+}
 
 tasks.jar {
     archiveFileName.set("demo-plugin.zip")
@@ -17,24 +24,26 @@ tasks.register('runMCreatorWithPlugin', JavaExec) {
 
     classpath = project(':MCreator').sourceSets.main.runtimeClasspath
 
-    main = 'net.mcreator.Launcher'
+    mainClass = 'net.mcreator.Launcher'
 
     workingDir = mcreator_path
 }
 
 subprojects { subproject ->
-    subproject.plugins.withType(JavaPlugin) {
-        test {
-            useJUnitPlatform()
+    subproject.plugins.withType(JavaPlugin).tap {
+        configureEach {
+            test {
+                useJUnitPlatform()
             include '**/GeneratorsTest.class'
 
             dependsOn rootProject.jar
 
-            environment("MCREATOR_PLUGINS_FOLDER", new File(rootProject.projectDir, "/build/libs"))
+                environment("MCREATOR_PLUGINS_FOLDER", new File(rootProject.projectDir, "/build/libs"))
             // These generators will be tested by MCreator tests if the plugin is loaded and if the corresponding generator already exists
             environment("MCREATOR_TEST_GENERATORS", "forge-1.14.4, forge-1.15.2")
 
-            workingDir = mcreator_path
+                workingDir = mcreator_path
+            }
         }
     }
 }
